@@ -26,8 +26,12 @@
 
 "use strict";
 
+
+if ( !window ) {
+	throw new Error( "jQuery requires a window" );
+}
 if ( !window.document ) {
-	throw new Error( "jQuery requires a window with a document" );
+	throw new Error( "jQuery requires a window.document" );
 }
 
 // @CODE
